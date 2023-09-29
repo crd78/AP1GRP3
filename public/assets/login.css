@@ -1,0 +1,65 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffe5e1; /* Rose pâle */
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff; /* Blanc */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    text-align: center;
+    color: #ff69b4; /* Rose vif */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ff69b4; /* Rose vif */
+}
+
+input[type="text"],
+input[type="password"],input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ff69b4; /* Rose vif */
+    border-radius: 3px;
+}
+
+button {
+    background-color: #ff69b4; /* Rose vif */
+    color: #fff; /* Blanc */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff1493; /* Rose foncé */
+}
+
+p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #ff69b4; /* Rose vif */
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ff1493; /* Rose foncé */
+}
