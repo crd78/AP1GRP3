@@ -21,8 +21,10 @@ class RegisterVerifController extends AbstractController
             $prenom = $request->request->get('prenom');
             $email = $request->request->get('email');
             $password = $request->request->get('password');
+            $password2 = $request->request->get('confirm_password');
             $nonadmin = 0;
 
+            if($password == $password2) {
             // Créez un nouvel utilisateur
             $user = new Utilisateur();
             $user->setNomUtilisateur($nom);
@@ -42,6 +44,12 @@ class RegisterVerifController extends AbstractController
             // Redirection après l'inscription
             return $this->redirectToRoute('app_accueil'); // Remplacez 'home' par la route de votre choix
             //redirectToRoute
+
+            }
+            else{
+                return $this->redirectToRoute('app_erreur_register');
+            }
+            
         }
 
         return $this->render('inscription/index.html.twig');

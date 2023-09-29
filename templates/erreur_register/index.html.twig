@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Erreur{% endblock %}
+
+{% block body %}
+<body>
+    <div id="content" color="black">
+        {% block content %}         Une erreur est survenue lors de l'inscription.{% endblock %}
+    </div>
+</body>
+{% endblock %}
