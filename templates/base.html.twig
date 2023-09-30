@@ -13,6 +13,65 @@
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
+        <style>
+
+        
+
+        /* Style de base pour la barre de navigation */
+        .navbar {
+        background-color:  #FFD1DV; /* Couleur de fond de la barre de navigation */
+        color: black; /* Couleur du texte */
+        padding: 15px 0; /* Espacement intérieur de la barre de navigation */
+        display: flex; /* Utiliser Flexbox pour centrer les éléments */
+        justify-content: space-between; /* Espacement équitable entre les éléments */
+         align-items: center; /* Centrer verticalement */
+        }
+
+        /* Style pour le texte du logo */
+        .navbar-brand {
+        font-family: 'Notable', sans-serif;
+        font-size: 24px;
+        cfont-weight: bold;
+        color: black; /* Couleur du texte du logo */
+         transition: color 1s; /* Ajoute une transition de couleur fluide */
+        }
+
+        /* Style pour les liens de la barre de navigation */
+        .navbar-nav .nav-link {
+        font-size: 16px;
+        color: black; /* Couleur du texte des liens */
+        margin-right: 160px; /* Espacement entre les liens */
+        transition: color 1s; /* Ajoute une transition de couleur fluide */
+        }
+
+        /* Style pour les liens de la barre de navigation au survol */
+        .navbar-nav .nav-link:hover {
+        color: white; /* Couleur du texte au survol */
+        }
+
+        .navbar-nav .nav-item .nav-link.active {
+            font-size: 16px;
+        color: black; /* Couleur du texte des liens */
+        margin-right: 160px; /* Espacement entre les liens */
+        transition: color 1s; /* Ajoute une transition de couleur fluide */
+        
+        }
+        .navbar-nav .nav-item .nav-link.active:hover {
+           color: white; /* Couleur du texte au survol */
+        }
+
+    
+
+   
+
+  
+    
+
+
+        </style>
     </head>
     <body>
     <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
@@ -41,7 +100,7 @@
           <a class="nav-link" href="/contact">Contact</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/contact">Se connecter</a>
+          <a class="nav-link" href="/contact">Connexion</a>
         </li>
       </ul>
     </div>
@@ -49,7 +108,7 @@
 </nav>
 <div class="logo"><img src="../assets/bannlogo.png"></div>
 <div class="femmbann"><img src="../assets/femmebann.png" width="10px"></div>
-<h1>Salut<h1>
+
         {% block body %}{% endblock %}
     </body>
 </html>
