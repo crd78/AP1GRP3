@@ -211,11 +211,13 @@ body {
   line-height: var(--bs-body-line-height);
   color: var(--bs-body-color);
   text-align: var(--bs-body-text-align);
-  background-color: 251,244,226;
+  background-color: #ffe5e1;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-
+.logolocalisation img{
+  width:10px;
+}
 .logo img{
   text-align:center;
   margin:auto;
@@ -233,7 +235,8 @@ body {
   text-align:center;
   margin:auto;
   display:flex;
-  width:500px;
+  width:75%;
+  height:100%;
   size:auto;
   
 }
