@@ -1,5 +1,5 @@
 body {
-    font-family: 'Notable', sans-serif;
+    font-family: 'Rakkas', sans-serif;
     background-color: #f8f8f8; /* Couleur de fond */
     color: #333; /* Couleur du texte principal */
     margin: 0;
@@ -52,7 +52,7 @@ body {
 .tab{
     display: grid;
     grid-template-columns: 200px 500px 50px;
-    grid-template-rows: 270px 500px 270px;
+    grid-template-rows: 100px 500px 100px;
 }
 .intro{
     grid-column: 1/3;
