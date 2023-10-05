@@ -233,8 +233,8 @@ body {
   text-align:center;
   margin:auto;
   display:flex;
-  width:500px;
-  size:auto;
+  width:1400px;
+  height: 350px;
   
 }
 @media(max-width:480px){
