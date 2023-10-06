@@ -5,7 +5,10 @@
 {% block body %}
 <body>
     <div id="content" color="black">
-        {% block content %}         Une erreur est survenue lors de l'inscription.{% endblock %}
+        {% block content %}
+        <p>Une erreur est survenue lors de l'inscription.</p>
+        <a href="{{ path('app_inscription') }}" class="btn btn-primary">Retour à l'inscription</a>
+        {% endblock %}
     </div>
 </body>
 {% endblock %}
