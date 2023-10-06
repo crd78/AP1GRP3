@@ -219,24 +219,30 @@ body {
 /* Réalisation du grid pour la page de présentation */
 .gridpres{
   display:grid;
-  grid-template-columns:3fr 4fr;
-  grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 650px  650px 100px;
+  grid-template-rows:1fr 150px 100px 1fr 1fr 1fr;
 }
+
 .imagefemepres{
-  grid-column-start:1;
-  grid-column:1/4;
+  margin-left:50px;
+  grid-column:1;
   grid-row:1;
 }
 .textepres{
+  margin-right:-10px;
   background-color:pink;
   grid-row:1;
-  grid-column:2;
+  grid-column:2/4;
 }
+
 .titremap{
-  grid-row:2;
+  margin-left:110px;
+  grid-column:1;
+  grid-row:3;
 }
 .map{
-  grid-row:3;
+  margin-left:40px;
+  grid-row:4;
 }
 /* FIN GRID PAGE PRES*/
 
