@@ -38,7 +38,11 @@ class RegisterVerifController extends AbstractController
                 $user->setNomUtilisateur($nom);
                 $user->setPrenomUtilisateur($prenom);
                 $user->setEmailUtilisateur($email);
-                $user->setMotdepasseUtilisateur($password);
+
+                // Cryptage MD5 du mot de passe
+                $hashedPassword = md5($password);
+                $user->setMotdepasseUtilisateur($hashedPassword);
+
                 $user->setAdminUtilisateur($nonadmin);
 
                 // Enregistrement de l'utilisateur en base de données
@@ -47,7 +51,7 @@ class RegisterVerifController extends AbstractController
                 $entityManager->flush();
 
                 // Redirection après l'inscription
-                return $this->redirectToRoute('app_accueil'); // Remplacez 'home' par la route de votre choix
+                return $this->redirectToRoute('app_accueil');
             } else {
                 return $this->redirectToRoute('app_erreur_register', ['message' => 'Les mots de passe ne correspondent pas']);
             }
