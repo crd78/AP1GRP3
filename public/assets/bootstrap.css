@@ -215,6 +215,31 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
+/* Réalisation du grid pour la page de présentation */
+.gridpres{
+  display:grid;
+  grid-template-columns:3fr 4fr;
+  grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.imagefemepres{
+  grid-column-start:1;
+  grid-column:1/4;
+  grid-row:1;
+}
+.textepres{
+  background-color:pink;
+  grid-row:1;
+  grid-column:2;
+}
+.titremap{
+  grid-row:2;
+}
+.map{
+  grid-row:3;
+}
+/* FIN GRID PAGE PRES*/
+
 .logolocalisation img{
   width:10px;
 }
