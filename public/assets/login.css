@@ -64,3 +64,21 @@ a:hover {
     text-decoration: underline;
     color: #ff1493; /* Rose foncé */
 }
+
+button.btn {
+    background-color: #ff69b4; /* Rose vif */
+    color: #fff; /* Blanc */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btn {
+    background-color: #ff69b4; /* Rose vif */
+    color: #fff; /* Blanc */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
