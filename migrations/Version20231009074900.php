@@ -20,12 +20,12 @@ final class Version20231009074522 extends AbstractMigration
     public function up(Schema $schema): void
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE user DROP motdepasse, DROP admin_utilisateur');
+        //$this->addSql('ALTER TABLE user DROP motdepasse, DROP admin_utilisateur');
     }
 
     public function down(Schema $schema): void
     {
         // this down() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE user DROP motdepasse, DROP admin_utilisateur');
+        //$this->addSql('ALTER TABLE user DROP motdepasse, DROP admin_utilisateur');
     }
 }
