@@ -65,13 +65,12 @@ body {
 
 .form-control {
     /* styles pour les champs de saisie */
-    border: 10px solid pink !important;
+    border: 5px solid pink !important;
     grid-column: 2/2;
     grid-row: 2/2;
     color:#333 !important;
+    border-radius: 50px;
 }
-
-
 
 
 .tab-content {
@@ -87,7 +86,18 @@ button{
     color: pink;
     margin-left: auto;
     color: black;
+    margin-left: 300px;
     
+}
+label{
+    color: black;
+    grid-column: 2/2;
+    grid-row: 2/2;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+p{
+    margin-left:830px;
 }
 
 

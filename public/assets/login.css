@@ -1,7 +1,7 @@
 /* style.css */
 body {
     font-family: "Rakkas", sans-serif;
-    background-color: #ffe5e1; /* Rose pâle */
+    background-color: white; 
     margin: 0;
     padding: 0;
 }
@@ -14,6 +14,8 @@ body {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-left:150px;
+    width: 800px;
 }
 
 h2 {
@@ -24,7 +26,8 @@ h2 {
 label {
     display: block;
     margin-bottom: 5px;
-    color: #ff69b4; /* Rose vif */
+    color: black; /* Rose vif */
+    margin-left: 700px;
 }
 
 input[type="text"],
@@ -32,8 +35,10 @@ input[type="password"],input[type="email"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ff69b4; /* Rose vif */
-    border-radius: 3px;
+    border: 5px solid pink !important; /* Rose vif */
+    border-radius: 50px;
+    width: 800px;
+    margin-left: 680px;
 }
 
 button {
@@ -43,10 +48,14 @@ button {
     padding: 10px 20px;
     border-radius: 3px;
     cursor: pointer;
+    border-radius: 50px;
+    margin-left: 990px;;
 }
 
 button:hover {
-    background-color: #ff1493; /* Rose foncé */
+    background-color: pink; /* Rose foncé */
+    border-radius: 50px;
+
 }
 
 p {
@@ -66,12 +75,13 @@ a:hover {
 }
 
 button.btn {
-    background-color: #ff69b4; /* Rose vif */
-    color: #fff; /* Blanc */
+    background-color: pink; /* Rose vif */
+    color: white; /* Blanc */
     border: none;
     padding: 10px 20px;
-    border-radius: 3px;
+    border-radius: 50px;
     cursor: pointer;
+    border-radius: 50px;
 }
 
 .btn {
@@ -81,4 +91,8 @@ button.btn {
     padding: 10px 20px;
     border-radius: 3px;
     cursor: pointer;
+    margin-top: 50px;
+}
+checkbox {
+    margin-left: 700px;
 }
