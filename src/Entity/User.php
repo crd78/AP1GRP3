@@ -48,16 +48,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $prenom_utilisateur;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $motdepasse;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $admin_utilisateur;
-
-    /**
      * @ORM\Column(type="boolean")
      */
     private $isVerified = false;
@@ -171,30 +161,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setPrenomUtilisateur(string $prenom_utilisateur): self
     {
         $this->prenom_utilisateur = $prenom_utilisateur;
-
-        return $this;
-    }
-
-    public function getMotdepasse(): ?string
-    {
-        return $this->motdepasse;
-    }
-
-    public function setMotdepasse(string $motdepasse): self
-    {
-        $this->motdepasse = $motdepasse;
-
-        return $this;
-    }
-
-    public function getAdminUtilisateur(): ?int
-    {
-        return $this->admin_utilisateur;
-    }
-
-    public function setAdminUtilisateur(int $admin_utilisateur): self
-    {
-        $this->admin_utilisateur = $admin_utilisateur;
 
         return $this;
     }

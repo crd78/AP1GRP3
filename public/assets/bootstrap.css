@@ -203,6 +203,10 @@
   }
 }
 
+.lien-rose {
+  color: rgb(120, 39, 101);
+}
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
