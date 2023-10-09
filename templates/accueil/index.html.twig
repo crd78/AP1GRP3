@@ -28,6 +28,9 @@
                 Prenez rendez-vous dès aujourd'hui et laissez-nous prendre soin de vous.</br></br>
 
                 Bienvenue dans l'univers de la beauté, bienvenue chez CamEstheticienne!
+                {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+    <p>Email: {{ app.user.email }}</p>
+{% endif %}
             </div>
             <div class="img">
                 <img src="assets/calendrier.jpg" alt="accueil">
