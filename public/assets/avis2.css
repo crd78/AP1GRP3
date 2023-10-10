@@ -7,9 +7,7 @@ body {
 }
 .formavis{
     display:grid;
-    grid-template-rows:1fr 1fr 1fr 1fr ;
-    margin-left:150px;
-    width:500px;
+    place-items:center;
 }
 
 .titreavis{
