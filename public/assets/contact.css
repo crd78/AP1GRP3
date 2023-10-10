@@ -21,12 +21,14 @@ body {
     font-size: 36px;
     color: #333;
     margin-bottom: 20px;
+    
 }
 
 .intro {
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 30px;
+    text-align: center;
 }
 
 .services {
@@ -84,9 +86,10 @@ body {
 button{
     margin-top: 50px;
     color: pink;
-    margin-left: auto;
+    text-align: center;
     color: black;
-    margin-left: 300px;
+   
+   
     
 }
 label{
@@ -96,9 +99,7 @@ label{
     margin-top: 10px;
     margin-left: 20px;
 }
-p{
-    margin-left:830px;
-}
+
 
 
 
