@@ -8,7 +8,7 @@ body {
 .gridpres{
     display:grid;
     align-items:center;
-    grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 50px 50px;
+    grid-template-columns:1fr 1fr 50px 1fr 1fr 1fr 1fr 1fr 50px 50px;
     grid-template-rows:1fr;
 }
 .imagefemepres{
