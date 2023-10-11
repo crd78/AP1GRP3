@@ -4,17 +4,25 @@
 
 {% block body %}
 
- <link rel="stylesheet" href="assets/avis.css">
+<link rel="stylesheet" href="assets/avis3.css">
+<div class="titreavis"><h1>Laissez votre avis</h1></div><br>
+<div class="texteavis">Chez CamEstheticienne, la beauté prend vie avec chaque visite. Notre équipe dévouée d'esthéticiennes passionnées vous offre une expérience exceptionnelle de soins de la peau, de maquillage et de bien-être. Notre priorité est de vous aider à vous sentir et à paraître votre meilleur, en utilisant des produits de haute qualité et des techniques innovantes. Votre avis compte énormément pour nous, car il nous aide à nous améliorer continuellement et à maintenir les normes élevées que vous méritez. Partagez votre expérience avec nous sur notre page d'avis et aidez-nous à continuer à rayonner ensemble.</div><br><br>
+    <div class="formavis"><form action="traitement.php" method="post">
+        <div class="nomClienttexte"><label for="nomClient" length="1000px">Nom du client</label></div>
+        <div class="nomClientlabel"><input type="text" id="nomClient" name="nomClient" required></div><br><br>
+        
+        <div class="prenomClienttexte"><label for="prenomClient" length="1000px">Prénom du client</label></div>
+        <div class="prenomClientlabel"><input type="text" id="prenomClient" name="prenomClient" required></div><br><br>
+        
+        <label for="dateAvis">Date de l'avis :</label>
+        <input type="date" id="dateAvis" name="dateAvis" required><br><br>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+        <label for="contenuAvis">Votre avis :</label><br>
+        <textarea id="contenuAvis" name="contenuAvis" rows="4" cols="50" required></textarea><br><br>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/jffco/Desktop/Cours/WorkSpace/AP1GRP3/src/Controller/AvisController.php'|file_link(0) }}">src/Controller/AvisController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/jffco/Desktop/Cours/WorkSpace/AP1GRP3/templates/avis/index.html.twig'|file_link(0) }}">templates/avis/index.html.twig</a></code></li>
-    </ul>
-</div>
+        <input type="submit" value="Soumettre">
+
+    </form></div>
 <div class="footer">
         <p>&copy; 2023 Camesthetique. Tous droits réservés.</p>
     </div>
