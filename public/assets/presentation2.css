@@ -5,7 +5,18 @@ body {
     margin: 0;
     padding: 0;
 }
-
+.gridpres{
+    display:grid;
+    align-items:center;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 50px 50px;
+    grid-template-rows:1fr;
+}
+.imagefemepres{
+    grid-column:2;
+}
+.textepres{
+    grid-column:3/8;
+}
 .container {
     max-width: 800px;
     margin: 0 auto;
