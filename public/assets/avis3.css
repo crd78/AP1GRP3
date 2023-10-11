@@ -16,6 +16,10 @@ body {
 .nomClienttexte{
     grid-column:1;
 }
+.texteavis{
+    background-color:pink;
+    text-align:center;
+}
 #nomClient {
     grid-column:3;
     border: 2px solid pink; /* Couleur rose pour la bordure */
