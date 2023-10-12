@@ -1,5 +1,7 @@
 <?php
+
 // src/Controller/PrestationsController.php
+
 namespace App\Controller;
 
 use App\Entity\Prestation;
@@ -11,34 +13,42 @@ use Symfony\Component\Routing\Annotation\Route;
 class PrestationsController extends AbstractController
 {
     /**
-     * @Route("/submit.php", name="submit_form", methods={"POST"})
+     * @Route("/prestations", name="app_prestation")
      */
-    public function submitForm(Request $request): Response
+    public function index(Request $request): Response
     {
-        // Récupérer les données du formulaire
-        $prestationsData = $request->request->get('prestations');
+        $user = $this->getUser();
 
-        // Créer et enregistrer une nouvelle entité Prestation pour chaque prestation sélectionnée
-        $entityManager = $this->getDoctrine()->getManager();
+        if ($user && $this->isGranted('IS_AUTHENTICATED_FULLY')) {
+            $nomUtilisateur = $user->getNomUtilisateur();
+            $prenomUtilisateur = $user->getPrenomUtilisateur();
 
-        foreach ($prestationsData as $prestationName) {
-            $prestation = new Prestation();
-            $prestation->setLibellePrestation($prestationName);
-            $prestation->setPrixUnitairePrestation($prestationName);
-            $prestation->setDescriptionPrestation($prestationName);
-            $prestation->setDureePrestation($prestationName);
+            // Traitement du formulaire
+            if ($request->isMethod('POST')) {
+                $selectedPrestations = $request->request->get('prestations', []);
 
+                // Sauvegardez les prestations sélectionnées dans la base de données
+                $entityManager = $this->getDoctrine()->getManager();
 
-            $entityManager->persist($prestation);
+                foreach ($selectedPrestations as $prestationName) {
+                    $prestation = new Prestation();
+                    $prestation->setName($prestationName);
+                    // Vous pouvez définir d'autres propriétés de l'entité ici
+                    $entityManager->persist($prestation);
+                }
+
+                $entityManager->flush();
+            }
+
+            return $this->render('prestations/index.html.twig', [
+                'controller_name' => 'PrestationsController',
+                'nom' => $nomUtilisateur,
+                'prenom' => $prenomUtilisateur,
+            ]);
+        } else {
+            return $this->render('contact/erreur.html.twig', [
+                'controller_name' => 'ContactController',
+            ]);
         }
-
-        // Enregistrer les changements dans la base de données
-        // Enregistrement de l'utilisateur en base de données
-        $entityManager = $this->getDoctrine()->getManager();
-        $entityManager->persist($prestation);
-        $entityManager->flush();
-
-        // Rediriger ou renvoyer la réponse appropriée
-        return $this->redirectToRoute('app_prestations');
     }
 }
