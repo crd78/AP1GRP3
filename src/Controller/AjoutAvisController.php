@@ -30,7 +30,7 @@ class AjoutAvisController extends AbstractController
             $contenuAvis = $request->request->get('contenuAvis');
             //$message = $request->request->get('message');
             $currentDateTime = new \DateTime();
-            $note = 5;
+            $note = $request->request->get('rating');
 
             // Créez un nouveau contact
             $avis = new Avis();
