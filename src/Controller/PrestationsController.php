@@ -36,29 +36,47 @@ class PrestationsController extends AbstractController
  */
 public function edit(Request $request, Prestation $prestation): Response
 {
-    $form = $this->createForm(PrestationType::class, $prestation);
+    if ($this->isGranted('IS_AUTHENTICATED_FULLY') and $this->getUser()->isVerified()){
+        $form = $this->createForm(PrestationType::class, $prestation);
 
-    $form->handleRequest($request);
+        $form->handleRequest($request);
 
-    if ($form->isSubmitted() && $form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
         $this->getDoctrine()->getManager()->flush();
 
         return $this->redirectToRoute('app_prestation');
-    }
+        }
 
-    return $this->render('prestations/edit.html.twig', ['form' => $form->createView()]);
+        return $this->render('prestations/edit.html.twig', ['form' => $form->createView()]);
+    }
+    else {
+        $prestations = $this->getDoctrine()->getRepository(Prestation::class)->findAll();
+        return $this->render('prestations/index.html.twig', [
+            'prestations' => $prestations,
+        ]);
+    }
+    
 }
 
 /**
- * @Route("/prestations/{id}/delete", name="prestation_delete")
+ * @Route("/prestationsdelete={id}", name="prestation_delete")
  */
 public function delete(Request $request, Prestation $prestation): Response
 {
-    $entityManager = $this->getDoctrine()->getManager();
-    $entityManager->remove($prestation);
-    $entityManager->flush();
+    if ($this->isGranted('IS_AUTHENTICATED_FULLY') and $this->getUser()->isVerified()){
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->remove($prestation);
+        $entityManager->flush();
 
-    return $this->redirectToRoute('app_prestation');
+        return $this->redirectToRoute('app_prestation');
+    }
+    else {
+        $prestations = $this->getDoctrine()->getRepository(Prestation::class)->findAll();
+        return $this->render('prestations/index.html.twig', [
+            'prestations' => $prestations,
+        ]);
+    }
+    
 }
 
 /**
@@ -66,19 +84,28 @@ public function delete(Request $request, Prestation $prestation): Response
  */
 public function new(Request $request): Response
 {
-    $prestation = new Prestation();
-    $form = $this->createForm(PrestationType::class, $prestation);
+    if ($this->isGranted('IS_AUTHENTICATED_FULLY') and $this->getUser()->isVerified()){
+        $prestation = new Prestation();
+        $form = $this->createForm(PrestationType::class, $prestation);
 
-    $form->handleRequest($request);
+        $form->handleRequest($request);
 
-    if ($form->isSubmitted() && $form->isValid()) {
-        $entityManager = $this->getDoctrine()->getManager();
-        $entityManager->persist($prestation);
-        $entityManager->flush();
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($prestation);
+            $entityManager->flush();
 
         return $this->redirectToRoute('app_prestation');
-    }
+        }
 
-    return $this->render('prestations/new.html.twig', ['form' => $form->createView()]);
+        return $this->render('prestations/new.html.twig', ['form' => $form->createView()]);
+    }
+    else {
+        $prestations = $this->getDoctrine()->getRepository(Prestation::class)->findAll();
+        return $this->render('prestations/index.html.twig', [
+            'prestations' => $prestations,
+        ]);
+    }
+    
 }
 }
