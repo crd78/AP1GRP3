@@ -12,6 +12,7 @@ body {
     grid-template-rows:1fr;
 }
 .imagefemepres{
+    margin-right:100px;
     grid-column:2;
 }
 .textepres{
