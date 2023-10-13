@@ -4324,6 +4324,7 @@ font-size: 20px;
 color: black; /* Couleur du texte des liens */
 margin-right: 110px; /* Espacement entre les liens */
 transition: color 1s; /* Ajoute une transition de couleur fluide */
+margin-left: 50px;
 }
 .navbar-nav .nav-link {
   font-size: 20px;
