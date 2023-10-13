@@ -3,56 +3,40 @@
 {% block title %}Prestations{% endblock %}
 
 {% block body %}
-<!DOCTYPE html>
+    <!DOCTYPE html>
+   
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ asset('assets/prestation.css') }}">
+        <title>Formulaire de Prestations</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/prestation.css">
-    <title>Formulaire de Prestations</title>
-</head>
+    <body>
+        <form action="submit.php" method="post">
+            <h2>Choisissez vos prestations :</h2>
+            
+            <table>
+                <tr>
+                    <th>Libellé Prestation</th>
+                    <th>Prix Unitaire</th>
+                    <th>Description</th>
+                    <th>Durée</th>
+                </tr>
 
+                {% for prestation in prestations %}
+                    <tr>
+                        <td>{{ prestation.getLibellePrestation() }}</td>
+                        <td>{{ prestation.getPrixUnitairePrestation() }}</td>
+                        <td>{{ prestation.getDescriptionPrestation() }}</td>
+                        <td>{{ prestation.getDureePrestation() }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
 
-    <form action="submit.php" method="post">
-        <h2>Choisissez vos prestations :</h2>
-        
-        <table>
-            <tr>
-                <th>Prestation</th>
-                <th>Durée</th>
-                <th>Prix</th>
-                <th>Sélectionner</th>
-            </tr>
-            <tr>
-                <td>Epilation maillot</td>
-                <td>30 min</td>
-                <td>30€</td>
-                <td><input type="checkbox" name="prestations[]" value="Epilation maillot"></td>
-            </tr>
-            <tr>
-                <td>Manucure</td>
-                <td>45 min</td>
-                <td>25€</td>
-                <td><input type="checkbox" name="prestations[]" value="Manucure"></td>
-            </tr>
-            <tr>
-                <td>Vernis</td>
-                <td>15 min</td>
-                <td>15€</td>
-                <td><input type="checkbox" name="prestations[]" value="Vernis"></td>
-            </tr>
-            <tr>
-                <td>Faux ongles</td>
-                <td>60 min</td>
-                <td>50€</td>
-                <td><input type="checkbox" name="prestations[]" value="Faux ongles"></td>
-            </tr>
-            <!-- Ajoutez autant de lignes que nécessaire -->
-        </table>
-
-        <button type="submit">Envoyer</button>
-    </form>
-
-
-
+            <button type="submit">Envoyer</button>
+        </form>
+    </body>
+    </html>
 {% endblock %}
+
