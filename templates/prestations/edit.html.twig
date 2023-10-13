@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Éditer Prestation{% endblock %}
+
+{% block body %}
+    <h1>Éditer la Prestation</h1>
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+
+    <button type="submit">Sauvegarder</button>
+    <a href="{{ path('app_prestation') }}">Annuler</a>
+
+    {{ form_end(form) }}
+{% endblock %}
