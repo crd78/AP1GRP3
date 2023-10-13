@@ -43,8 +43,8 @@ input[type="email"] {
     border: 5px solid pink !important; /* Rose vif */
     border-radius: 50px;
     width: 800px;
-    margin-left: 30%; /* Center the input horizontally */
-    margin-right: 30%;
+    display: block; /* Pour occuper toute la largeur disponible */
+    margin: 0 auto; /* Centre horizontalement */
 }
 
 
@@ -59,7 +59,8 @@ button {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 1100%);
+    transform: translate(-50%, 1000%);
+
 }
 
 button:hover {
@@ -115,6 +116,14 @@ button.btn {
     cursor: pointer; /* Curseur pointer pour indiquer l'interaction */
     vertical-align: middle; /* Alignement vertical */
     margin-left: 50%;
+}
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+    margin-top: 150px;
 }
 
 
