@@ -3,13 +3,19 @@
 {% block title %}Éditer Prestation{% endblock %}
 
 {% block body %}
+
+ <link rel="stylesheet" href="assets/adminpresta.css">
     <h1>Éditer la Prestation</h1>
-
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
-
+       
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+      
     <button type="submit">Sauvegarder</button>
     <a href="{{ path('app_prestation') }}">Annuler</a>
 
     {{ form_end(form) }}
+
+    <div class="footer">
+        <p>&copy; 2023 Camesthetique. Tous droits réservés.</p>
+    </div>
 {% endblock %}
