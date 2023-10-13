@@ -26,16 +26,20 @@
 
                 {% for prestation in prestations %}
                     <tr>
-                        <td>{{ prestation.getLibellePrestation() }}</td>
-                        <td>{{ prestation.getPrixUnitairePrestation() }}</td>
-                        <td>{{ prestation.getDescriptionPrestation() }}</td>
-                        <td>{{ prestation.getDureePrestation() }}</td>
+                        <td>{{ prestation.getLibellePrestation() }} </td>
+                        <td>{{ prestation.getPrixUnitairePrestation() }} €</td>
+                        <td>{{ prestation.getDescriptionPrestation() }} </td>
+                        <td>{{ prestation.getDureePrestation() }} min</td>
                     </tr>
                 {% endfor %}
             </table>
 
           
         </form>
+
+         <div class="footer">
+        <p>&copy; 2023 Camesthetique. Tous droits réservés.</p>
+    </div>
     </body>
     </html>
 {% endblock %}

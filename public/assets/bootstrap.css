@@ -472,7 +472,8 @@ Generic layout (demo looks)
   margin:auto;
   display:flex;
   width:300px;
- }
+  border-radius: 50px;
+}
 
 .femmbann img{
   text-align:center;
