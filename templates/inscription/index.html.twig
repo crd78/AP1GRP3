@@ -1,23 +1,23 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+
+
+
 </br></br>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <link rel="stylesheet" href="assets/login.css">
+     <link rel="stylesheet" href="assets/login.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription</title>
 </head>
-<body>
+<body> 
+
     <div class="container">
         <form action="/register/verif" method="post">
-            <h2>Inscription</h2>
+            <h4>Inscription</h4>
             <label for="nom">Nom :</label>
             <input type="text" id="nom" name="nom" required>
             </br></br>
@@ -33,11 +33,11 @@
             <label for="confirm_password">Confirmer le mot de passe :</label>
             <input type="password" id="confirm_password" name="confirm_password" required>
             </br></br>
-            <button type="submit">S'inscrire</button>
+            <button class="inscrire" type="submit">S'inscrire</button>
         </form>
         </br></br>
         <p>Déjà inscrit ? <a href="/connexion">Se connecter</a></p>
-    </div>
+   
 </body>
 </html>
 {% endblock %}

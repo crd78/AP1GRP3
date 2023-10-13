@@ -3,19 +3,56 @@
 {% block title %}Prestations{% endblock %}
 
 {% block body %}
-<link rel="stylesheet" href="assets/prestation.css">
+<!DOCTYPE html>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/prestation.css">
+    <title>Formulaire de Prestations</title>
+</head>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/jffco/Desktop/Cours/WorkSpace/AP1GRP3/src/Controller/PrestationsController.php'|file_link(0) }}">src/Controller/PrestationsController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/jffco/Desktop/Cours/WorkSpace/AP1GRP3/templates/prestations/index.html.twig'|file_link(0) }}">templates/prestations/index.html.twig</a></code></li>
-    </ul>
-</div>
- <div class="footer">
-        <p>&copy; 2023 Camesthetique. Tous droits réservés.</p>
-    </div>
+
+    <form action="submit.php" method="post">
+        <h2>Choisissez vos prestations :</h2>
+        
+        <table>
+            <tr>
+                <th>Prestation</th>
+                <th>Durée</th>
+                <th>Prix</th>
+                <th>Sélectionner</th>
+            </tr>
+            <tr>
+                <td>Epilation maillot</td>
+                <td>30 min</td>
+                <td>30€</td>
+                <td><input type="checkbox" name="prestations[]" value="Epilation maillot"></td>
+            </tr>
+            <tr>
+                <td>Manucure</td>
+                <td>45 min</td>
+                <td>25€</td>
+                <td><input type="checkbox" name="prestations[]" value="Manucure"></td>
+            </tr>
+            <tr>
+                <td>Vernis</td>
+                <td>15 min</td>
+                <td>15€</td>
+                <td><input type="checkbox" name="prestations[]" value="Vernis"></td>
+            </tr>
+            <tr>
+                <td>Faux ongles</td>
+                <td>60 min</td>
+                <td>50€</td>
+                <td><input type="checkbox" name="prestations[]" value="Faux ongles"></td>
+            </tr>
+            <!-- Ajoutez autant de lignes que nécessaire -->
+        </table>
+
+        <button type="submit">Envoyer</button>
+    </form>
+
+
 
 {% endblock %}

@@ -17,19 +17,19 @@ class Contact
      */
     private $id;
 
-    /**
+     /**
      * @ORM\Column(type="integer")
      */
     private $CtIdUtilisateur;
 
-    /**
+     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $ObjetContact;
+     private $ObjetContact;
 
-    /**
+    /**   
      * @ORM\Column(type="text")
-     */
+    */
     private $ContenuContact;
 
     /**
@@ -54,7 +54,7 @@ class Contact
         return $this;
     }
 
-    public function getObjetContact(): ?string
+     public function getObjetContact(): ?string
     {
         return $this->ObjetContact;
     }
@@ -66,7 +66,7 @@ class Contact
         return $this;
     }
 
-    public function getContenuContact(): ?string
+     public function getContenuContact(): ?string
     {
         return $this->ContenuContact;
     }
@@ -78,7 +78,7 @@ class Contact
         return $this;
     }
 
-    public function getDateContact(): ?\DateTimeInterface
+     public function getDateContact(): ?\DateTimeInterface
     {
         return $this->dateContact;
     }
@@ -89,4 +89,8 @@ class Contact
 
         return $this;
     }
+
+     /**
+     * @return Property|null
+     */
 }
