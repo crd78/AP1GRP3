@@ -1,3 +1,5 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css);
+
 body {
     font-family: 'Rakkas', sans-serif;
     background-color: white; /* Couleur de fond */
@@ -23,8 +25,6 @@ body {
 }
 
 /*NOTATION SUR 5 ETOILES*/
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css);
-
 *{
 	margin: 0;
 	padding: 0;
@@ -72,7 +72,7 @@ body {
 
 .rating > label:before{
 	content: '\f005';
-    font-family:;
+    font-family:FontAwesome;
 	margin: 5px;
 	font-size: 1.5rem;
 	display: inline-block;
