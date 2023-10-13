@@ -61,7 +61,7 @@
         </li>
         <li>
         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-        <p class="nav-link">Utilisateur connecté : {{ app.user.email }}</p>
+        <p class="nav-link">{{ app.user.email }}</p>
         {% endif %}
         </li>
       </ul>

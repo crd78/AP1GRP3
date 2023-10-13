@@ -18,11 +18,6 @@ class Avis
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $libelleAvis;
-
-    /**
      * @ORM\Column(type="integer")
      */
     private $noteAvis;
@@ -31,6 +26,16 @@ class Avis
      * @ORM\Column(type="integer")
      */
     private $idUtilisateurAvis;
+
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $dateAvis;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $libelleAvis;
 
     public function getId(): ?int
     {
@@ -69,6 +74,18 @@ class Avis
     public function setIdUtilisateurAvis(int $idUtilisateurAvis): self
     {
         $this->idUtilisateurAvis = $idUtilisateurAvis;
+
+        return $this;
+    }
+
+    public function getDateAvis(): ?\DateTimeInterface
+    {
+        return $this->dateAvis;
+    }
+
+    public function setDateAvis(\DateTimeInterface $dateAvis): self
+    {
+        $this->dateAvis = $dateAvis;
 
         return $this;
     }
