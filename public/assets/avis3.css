@@ -11,10 +11,12 @@ body {
     display:grid;
     place-items:center;
 }
+
 .wrapper{
     display:grid;
     grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr ;
 }
+
 .titreavis{
     text-align:center;
 }
