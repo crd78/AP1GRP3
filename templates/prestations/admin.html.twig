@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Prestations{% endblock %}
+
+{% block body %}
+    <h2>Liste des prestations :</h2>
+    
+    <table>
+        <tr>
+            <th>Libellé Prestation</th>
+            <th>Prix Unitaire</th>
+            <th>Description</th>
+            <th>Durée</th>
+            <th>Actions</th>
+        </tr>
+
+        {% for prestation in prestations %}
+            <tr>
+                <td>{{ prestation.getLibellePrestation() }}</td>
+                <td>{{ prestation.getPrixUnitairePrestation() }}</td>
+                <td>{{ prestation.getDescriptionPrestation() }}</td>
+                <td>{{ prestation.getDureePrestation() }}</td>
+                <td>
+                    <a href="{{ path('prestation_edit', {'id': prestation.id}) }}">Modifier</a>
+                    <a href="{{ path('prestation_delete', {'id': prestation.id}) }}">Supprimer</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <a href="{{ path('prestation_new') }}">Ajouter une nouvelle prestation</a>
+{% endblock %}
