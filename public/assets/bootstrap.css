@@ -223,7 +223,7 @@ body {
 /* Réalisation du grid pour la page de présentation */
 .gridpres{
   display:grid;
-  grid-template-columns: 650px  650px 100px;
+  grid-template-columns:40% 40% 15%;
   grid-template-rows:1fr 50px;
 }
 
@@ -240,6 +240,8 @@ body {
   background-color:pink;
   grid-row:1;
   grid-column:2/4;
+  border-radius:50px;
+  align-items:center;
 }
 
 .titremap{
@@ -254,6 +256,15 @@ body {
 }
 .cardspres{
   grid-row:4;
+}
+.boutonsoumettre input {
+  display:block;
+  justify-content:center;
+}
+.input[type="submit"]{
+  display:block;
+  align-items:center;
+
 }
 /* FIN GRID PAGE PRES*/
 /*WORLD MAP*/
