@@ -1,0 +1,128 @@
+/* style.css */
+body {
+    font-family: "Rakkas", sans-serif;
+    background-color: white; 
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff; /* Blanc */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  
+   
+    width: 800px;
+}
+
+h1 {
+    
+    color: black; /* Rose vif */
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: black; /* Rose vif */
+    text-align: center;
+    
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 5px solid pink !important; /* Rose vif */
+    border-radius: 50px;
+    width: 800px;
+    display: block; /* Pour occuper toute la largeur disponible */
+    margin: 0 auto; /* Centre horizontalement */
+}
+
+
+button {
+    background-color: #ff69b4; /* Rose vif */
+    color: white; /* Blanc */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 1100%);
+    margin-top: 150px;
+}
+
+button:hover {
+    background-color: pink; /* Rose foncé */
+    border-radius: 50px;
+
+}
+
+p {
+    color: #ff1493; /* Rose foncé */
+    text-align: center;
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: pink; /* Rose vif */
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ff1493; /* Rose foncé */
+}
+
+button.btn {
+    background-color: pink; /* Rose vif */
+    color: white; /* Blanc */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.btn {
+    background-color: pink; /* Rose vif */
+
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    
+}
+/* Style pour la case cochée */
+#registration_form_agreeTerms {
+    /* Styles généraux */
+    margin-right: 5px; /* Marge à droite pour l'espace */
+
+    /* Styles spécifiques à la case à cocher */
+    width: 10px; /* Largeur de la case à cocher */
+    height: 10px; /* Hauteur de la case à cocher */
+    cursor: pointer; /* Curseur pointer pour indiquer l'interaction */
+    vertical-align: middle; /* Alignement vertical */
+    margin-left: 50%;
+}
+.footer {
+    text-align: center;
+    margin-top: 200px;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+
