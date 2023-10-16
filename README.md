@@ -8,7 +8,6 @@ Bienvenue dans le projet Symfony ! Ce projet est une application web construite 
 - [Configuration](#configuration)
 - [Utilisation](#utilisation)
 - [Contribution](#contribution)
-- [Licence](#licence)
 
 ## Installation
 
@@ -20,32 +19,23 @@ Pour commencer à travailler avec ce projet, suivez les étapes d'installation c
    git clone https://github.com/votre-utilisateur/votre-projet.git
 Accédez au répertoire du projet :
 
-bash
-Copy code
-cd votre-projet
+`cd votre-projet`
 Installez les dépendances à l'aide de Composer :
 
-bash
-Copy code
-composer install
+`composer install`
 Configuration
 Avant de pouvoir utiliser l'application, assurez-vous de configurer les paramètres nécessaires. Copiez le fichier .env en .env.local et ajustez les valeurs selon vos besoins. N'oubliez pas de configurer votre base de données.
 
-bash
-Copy code
-cp .env .env.local
+`cp .env .env.local`
 Pour créer la base de données et exécuter les migrations, utilisez la commande Symfony suivante :
 
-bash
-Copy code
-php bin/console doctrine:database:create
-php bin/console doctrine:migrations:migrate
+`php bin/console doctrine:database:create`
+`php bin/console doctrine:migrations:migrate`
+
 Utilisation
 Maintenant que tout est configuré, vous pouvez lancer l'application en utilisant le serveur de développement intégré de Symfony :
 
-bash
-Copy code
-symfony server:start
+`symfony server:start`
 L'application sera disponible à l'adresse http://localhost:8000 par défaut.
 
 Contribution
@@ -57,3 +47,9 @@ Nous sommes ouverts aux contributions de la communauté ! Si vous souhaitez cont
 4. Testez vos modifications.
 5. Soumettez une demande d'extraction (Pull Request).
 6. Attendez la revue et la validation de votre Pull Request.
+
+Créer un utilisateur :
+
+Il suffit simplement d'aller sur la page inscription du site puis l'utilisateur sera enregistré en base de donnée.
+
+Pour le mettre en mode administrateur, il faut aller dans la table "user" de la base de donnée nommée "app", trouver votre utilisateur, puis modifier la valeurs de la colonne "isVerified" à 1.
