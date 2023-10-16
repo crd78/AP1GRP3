@@ -7,7 +7,6 @@ Bienvenue dans le projet Symfony ! Ce projet est une application web construite 
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Utilisation](#utilisation)
-- [Contribution](#contribution)
 - [Créer Un Utilisateur](#créer-un-utilisateur)
 
 ## Installation
@@ -39,16 +38,6 @@ Maintenant que tout est configuré, vous pouvez lancer l'application en utilisan
 `symfony server:start`
 
 L'application sera disponible à l'adresse http://localhost:8000 par défaut.
-
-Contribution
-Nous sommes ouverts aux contributions de la communauté ! Si vous souhaitez contribuer à ce projet, veuillez suivre les étapes suivantes :
-
-1. Fork ce dépôt.
-2. Créez une branche pour votre contribution : git checkout -b feature/nouvelle-fonctionnalite.
-3. Faites vos modifications et assurez-vous de respecter les conventions de codage.
-4. Testez vos modifications.
-5. Soumettez une demande d'extraction (Pull Request).
-6. Attendez la revue et la validation de votre Pull Request.
 
 ## Créer un utilisateur :
 
