@@ -24,6 +24,8 @@ Installez les dépendances à l'aide de Composer :
 `composer install`
 
 ## Configuration
+N'oubliez pas d'allumer WampServer avant toute manipulation de la base de données.
+
 Avant de pouvoir utiliser l'application, assurez-vous de configurer les paramètres nécessaires. Copiez le fichier .env en .env.local et ajustez les valeurs selon vos besoins. N'oubliez pas de configurer votre base de données.
 
 `cp .env .env.local`
