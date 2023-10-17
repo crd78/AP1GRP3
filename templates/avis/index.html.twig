@@ -46,6 +46,26 @@ document.addEventListener('DOMContentLoaded', function() {
     <input type="submit" value="Soumettre">
     
     </form></div>
+
+			<table>
+                <tr>
+                    <th>Utilisateur</th>
+                    <th>Avis</th>
+                    <th>Note</th>
+                    <th>Date</th>
+                </tr>
+
+                {% for item in avisAvecUtilisateurs %}
+        <tr>
+        <td>{{ item.utilisateur.getNomUtilisateur() }} {{ item.utilisateur.getPrenomUtilisateur() }}</td>
+        <td>{{ item.avis.getLibelleAvis() }}</td>
+        <td>{{ item.avis.getNoteAvis() }}</td>
+        <td>{{ item.avis.getDateAvis().format('Y-m-d H:i') }}</td>
+        </tr>
+                {% endfor %}
+            </table>
+
+
 <div class="footer">
         <p>&copy; 2023 Camesthetique. Tous droits réservés.</p>
     </div>
