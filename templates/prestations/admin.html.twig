@@ -3,6 +3,12 @@
 {% block title %}Prestations{% endblock %}
 
 {% block body %}
+   
+ <head>
+       
+        <link rel="stylesheet" href="assets/adminpresta.css">
+        <title>Formulaire de Prestations</title>
+    </head>
     <h2>Liste des prestations :</h2>
     
     <table>
@@ -25,8 +31,13 @@
                     <a href="{{ path('prestation_delete', {'id': prestation.id}) }}">Supprimer</a>
                 </td>
             </tr>
+        
         {% endfor %}
     </table>
-
-    <a href="{{ path('prestation_new') }}">Ajouter une nouvelle prestation</a>
+    <div class="nvx">
+        <a href="{{ path('prestation_new') }}">Ajouter une nouvelle prestation</a>
+    </div>
+    <div class="footer">
+        <p>&copy; 2023 Camesthetique. Tous droits réservés.</p>
+    </div>
 {% endblock %}
