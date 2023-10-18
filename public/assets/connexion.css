@@ -60,6 +60,7 @@ button {
     top: 50%;
     left: 50%;
     transform: translate(-50%, 1100%);
+    margin-top: 150px;
 }
 
 button:hover {
@@ -123,6 +124,5 @@ button.btn {
     background-color: #333;
     color: #fff;
 }
-
 
 

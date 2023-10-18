@@ -9,12 +9,12 @@
 <div class="wrapper">
 <div class="texteavis">Chez CamEstheticienne, la beauté prend vie avec chaque visite. Notre équipe dévouée d'esthéticiennes passionnées vous offre une expérience exceptionnelle de soins de la peau, de maquillage et de bien-être. Notre priorité est de vous aider à vous sentir et à paraître votre meilleur, en utilisant des produits de haute qualité et des techniques innovantes. Votre avis compte énormément pour nous, car il nous aide à nous améliorer continuellement et à maintenir les normes élevées que vous méritez. Partagez votre expérience avec nous sur notre page d'avis et aidez-nous à continuer à rayonner ensemble.</div><br><br>
 </div><br></br>  
-    <div class="formavis"><form action="traitement.php" method="post">
+    <div class="formavis"><form action="ajoutavis" method="post">
         <div class="nomClienttexte"><label for="nomClient" length="1000px">Nom du client</label></div>
-        <div class="nomClientlabel"><input type="text" id="nomClient" name="nomClient" required></div><br><br>
+        <div class="nomClientlabel"><input type="text" id="nomClient" name="nomClient" value="{{ nom }}" required></div><br><br>
         
         <div class="prenomClienttexte"><label for="prenomClient" length="1000px">Prénom du client</label></div>
-        <div class="prenomClientlabel"><input type="text" id="prenomClient" name="prenomClient" required></div><br><br>
+        <div class="prenomClientlabel"><input type="text" id="prenomClient" name="prenomClient" value="{{ prenom }}" required></div><br><br>
 
         <label for="contenuAvis">Votre avis :</label><br>
         <textarea id="contenuAvis" name="contenuAvis" rows="4" cols="50" required></textarea><br>
@@ -24,11 +24,18 @@
 			<h2>NOTE</h2>
 			<div class="center">
 				<fieldset class="rating">
-					<input type="radio" id="star5" name="rating" value="5"/><label for="star5" class="full" title="Awesome"></label>
+					<input type="radio" id="star5" name="rating" value="5"/><label for="star5" class="full" title="Awesome" checked /></label>
 					<input type="radio" id="star4" name="rating" value="4"/><label for="star4" class="full"></label>
 					<input type="radio" id="star3" name="rating" value="3"/><label for="star3" class="full"></label>
 					<input type="radio" id="star2" name="rating" value="2"/><label for="star2" class="full"></label>
 					<input type="radio" id="star1" name="rating" value="1"/><label for="star1" class="full"></label>
+					<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Sélectionner le bouton radio avec la valeur 5
+    var star5 = document.getElementById('star5');
+    star5.checked = true;
+});
+</script>
 			</div>
 			<h4 id="rating-value"></h4>
 		</div>
@@ -37,6 +44,26 @@
 	<script src="assets/js/note.js"></script>
     <input type="submit" value="Soumettre">
     </form></div>
+
+			<table>
+                <tr>
+                    <th>Utilisateur</th>
+                    <th>Avis</th>
+                    <th>Note</th>
+                    <th>Date</th>
+                </tr>
+
+                {% for item in avisAvecUtilisateurs %}
+        <tr>
+        <td>{{ item.utilisateur.getNomUtilisateur() }} {{ item.utilisateur.getPrenomUtilisateur() }}</td>
+        <td>{{ item.avis.getLibelleAvis() }}</td>
+        <td>{{ item.avis.getNoteAvis() }}</td>
+        <td>{{ item.avis.getDateAvis().format('Y-m-d H:i') }}</td>
+        </tr>
+                {% endfor %}
+            </table>
+
+
 <div class="footer">
         <p>&copy; 2023 Camesthetique. Tous droits réservés.</p>
     </div>

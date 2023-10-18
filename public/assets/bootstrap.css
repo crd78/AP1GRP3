@@ -483,7 +483,8 @@ Generic layout (demo looks)
   margin:auto;
   display:flex;
   width:300px;
- }
+  border-radius: 50px;
+}
 
 .femmbann img{
   text-align:center;
@@ -512,7 +513,7 @@ hr {
   opacity: 0.25;
 }
 
-h6, .h6, h5, .h5, h4, .h4, h3, .h3 {
+h6, .h6, h5, .h5, h4, .h4 {
   margin-top: 100px;
   margin-bottom: 1rem;
   font-weight: 700;
@@ -2713,7 +2714,6 @@ textarea.form-control-lg {
 }
 .form-check-input[type=checkbox] {
   border-radius: 0.25em;
-  margin-left: 500px;
 }
 .form-check-input[type=radio] {
   border-radius: 50%;
@@ -4321,6 +4321,7 @@ textarea.form-control-lg {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  margin-left:10px ;
 }
 .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
   color: var(--bs-navbar-active-color);
@@ -4334,14 +4335,16 @@ textarea.form-control-lg {
 .navbar-nav .nav-item .nav-link.active {
 font-size: 20px;
 color: black; /* Couleur du texte des liens */
-margin-right: 110px; /* Espacement entre les liens */
+margin-right: 50px; /* Espacement entre les liens */
 transition: color 1s; /* Ajoute une transition de couleur fluide */
+margin-left: 0px;
 }
 .navbar-nav .nav-link {
   font-size: 20px;
   color: black; /* Couleur du texte des liens */
-  margin-right: 110px; /* Espacement entre les liens */
+  margin-right: 50px; /* Espacement entre les liens */
   transition: color 1s; /* Ajoute une transition de couleur fluide */
+  
   }
 
 .navbar-nav .nav-item .nav-link.active:hover {

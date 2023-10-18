@@ -15,7 +15,8 @@
             Vous êtes connecter avec le compte {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}" class="lien-rose">Se Déconnecter</a>
         </div>
     {% endif %}
-
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+    {% else %}
     <h1 class="h3 mb-3 font-weight-normal">Se connecter</h1>
     <label for="inputEmail">Email</label>
     <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
@@ -43,4 +44,8 @@
 </form>
 </br>
 <p><a href="/register">Jamais inscrit? S'inscrire</a></p> 
+{% endif %}
+ <div class="footer">
+        <p>&copy; 2023 Camesthetique. Tous droits réservés.</p>
+    </div>
 {% endblock %}
