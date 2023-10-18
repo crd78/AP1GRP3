@@ -4321,6 +4321,7 @@ textarea.form-control-lg {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  margin-left:10px ;
 }
 .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
   color: var(--bs-navbar-active-color);
@@ -4334,15 +4335,16 @@ textarea.form-control-lg {
 .navbar-nav .nav-item .nav-link.active {
 font-size: 20px;
 color: black; /* Couleur du texte des liens */
-margin-right: 110px; /* Espacement entre les liens */
+margin-right: 50px; /* Espacement entre les liens */
 transition: color 1s; /* Ajoute une transition de couleur fluide */
-margin-left: 50px;
+margin-left: 0px;
 }
 .navbar-nav .nav-link {
   font-size: 20px;
   color: black; /* Couleur du texte des liens */
-  margin-right: 110px; /* Espacement entre les liens */
+  margin-right: 50px; /* Espacement entre les liens */
   transition: color 1s; /* Ajoute une transition de couleur fluide */
+  
   }
 
 .navbar-nav .nav-item .nav-link.active:hover {
