@@ -43,25 +43,16 @@ document.addEventListener('DOMContentLoaded', function() {
 	<script src="https://example.com/fontawesome/v5.15.4/js/all.js" data-auto-a11y="true" ></script>
 	<script src="assets/js/note.js"></script>
     <input type="submit" value="Soumettre">
-    </form></div>
-
-			<table>
-                <tr>
-                    <th>Utilisateur</th>
-                    <th>Avis</th>
-                    <th>Note</th>
-                    <th>Date</th>
-                </tr>
-
+    </form></div><br>
                 {% for item in avisAvecUtilisateurs %}
-        <tr>
-        <td>{{ item.utilisateur.getNomUtilisateur() }} {{ item.utilisateur.getPrenomUtilisateur() }}</td>
-        <td>{{ item.avis.getLibelleAvis() }}</td>
-        <td>{{ item.avis.getNoteAvis() }}</td>
-        <td>{{ item.avis.getDateAvis().format('Y-m-d H:i') }}</td>
-        </tr>
+        <div class="containeravis">
+            <div class="avis">
+            <h1>{{ item.utilisateur.getNomUtilisateur() }} {{ item.utilisateur.getPrenomUtilisateur() }}</h1>
+            <h2>Note : {{ item.avis.getNoteAvis() }} sur 5</h2>
+            <p>{{ item.avis.getLibelleAvis() }}</p>
+            </div>
+        </div>
                 {% endfor %}
-            </table>
 
 
 <div class="footer">
