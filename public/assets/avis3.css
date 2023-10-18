@@ -66,21 +66,19 @@ body {
 	box-shadow: inset 0 0 2px 1px rgba(46,204,113,.2);
 }
 /* Système de carte d'avis */
-.containeravis{
-    display:flex;
-    width:100%;
-    justify-content:space-around;
-    justify-content:center;
-    align-items:center;
-    gap:30px;
+.containeravis {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
 }
-.avis{
-    width: 350px;
-    height:100%;
-    align-items:center;
-    text-align:center;
-    padding:10px;
-    box-shadow:1px 1px 10px #333 ;
+
+.avis {
+    flex: 0 0 calc(33.33% - 20px); /* Répartit l'espace sur 3 colonnes avec espacement */
+    margin-right: 20px; /* Ajoute un espacement entre les avis */
+    padding: 10px;
+    box-shadow: 1px 1px 10px #333;
+    margin-bottom: 20px; /* Espacement entre les lignes d'avis */
 }
 .avis p{
     margin-top:10px;

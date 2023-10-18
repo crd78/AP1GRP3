@@ -43,18 +43,20 @@ document.addEventListener('DOMContentLoaded', function() {
 	<script src="https://example.com/fontawesome/v5.15.4/js/all.js" data-auto-a11y="true" ></script>
 	<script src="assets/js/note.js"></script>
     <input type="submit" value="Soumettre">
-    </form></div><br>
-                {% for item in avisAvecUtilisateurs %}
-        <div class="containeravis">
+    </form></br><div>
+                {% for item in avisAvecUtilisateurs|batch(3) %}
+    <div class="containeravis">
+        {% for avis in item %}
             <div class="avis">
-            <h1>{{ item.utilisateur.getNomUtilisateur() }} {{ item.utilisateur.getPrenomUtilisateur() }}</h1>
-            <h2>Note : {{ item.avis.getNoteAvis() }} sur 5</h2>
-            <p>{{ item.avis.getLibelleAvis() }}</p>
+                <h1>{{ avis.utilisateur.getNomUtilisateur() }} {{ avis.utilisateur.getPrenomUtilisateur() }}</h1>
+                <h2>Note : {{ avis.avis.getNoteAvis() }} sur 5</h2>
+                <p>{{ avis.avis.getLibelleAvis() }}</p>
             </div>
-        </div>
-                {% endfor %}
-
-
+        {% endfor %}
+    </div>
+{% endfor %}
+</div>
+</br></br>
 <div class="footer">
         <p>&copy; 2023 Camesthetique. Tous droits réservés.</p>
     </div>
