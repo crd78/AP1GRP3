@@ -39,7 +39,7 @@ class AjoutAvisController extends AbstractController
             $avis->setIdUtilisateurAvis($idUser);
             $avis->setDateAvis($currentDateTime);
 
-            // Enregistrement de l'utilisateur en base de données
+            // Enregistrement de l'avis' en base de données
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($avis);
             $entityManager->flush();

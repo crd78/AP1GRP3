@@ -17,13 +17,19 @@ class AvisController extends AbstractController
      */
     public function index(Request $request, EntityManagerInterface $entityManager): Response
     {
+        //Recupere tout les avis
         $avis = $this->getDoctrine()->getRepository(Avis::class)->findAll();
+        //Creer une liste
         $avisAvecUtilisateurs = array();
 
     foreach ($avis as $unavis) {
+        //Recupere l'id de l'utilisateur de l'avis
     $userId = $unavis->getIdUtilisateurAvis();
+    //recupere tt les utilisateur
     $userRepository = $entityManager->getRepository(User::class);
+    //trouve user avec id dans avis
     $unutilisateur = $userRepository->find($userId);
+    //créer une variable contenant l'avis + l'utilisateur
     $avisAvecUtilisateurs[] = [
         'avis' => $unavis,
         'utilisateur' => $unutilisateur,
