@@ -1,6 +1,6 @@
 # Projet Symfony CamEsthetique
 
-Bienvenue dans le projet Symfony ! Ce projet est une application web construite en utilisant le framework Symfony, conçue pour [décrire brièvement la finalité de votre projet].
+Bienvenue dans le projet Symfony ! Ce projet est une application web construite en utilisant le framework Symfony, conçue pour nous exercer dans l'utilisation du framework Symfony, notament la méthode MVC.
 
 ## Table des matières
 
@@ -8,6 +8,8 @@ Bienvenue dans le projet Symfony ! Ce projet est une application web construite 
 - [Configuration](#configuration)
 - [Utilisation](#utilisation)
 - [Créer Un Utilisateur](#créer-un-utilisateur-)
+- [Languages](#language)
+- [Auteurs](#auteurs)
 
 ## Installation
 
@@ -46,3 +48,16 @@ L'application sera disponible à l'adresse http://localhost:8000 par défaut.
 Il suffit simplement d'aller sur la page inscription du site puis l'utilisateur sera enregistré en base de donnée.
 
 Pour le mettre en mode administrateur, il faut aller dans la table "user" de la base de donnée nommée "app", trouver votre utilisateur, puis modifier la valeurs de la colonne "isVerified" à 1.
+
+## Language :
+
+Les différents languages utilisés dans le projet sont :
+- CSS
+- PHP
+- HTML
+- Javascript
+
+## Auteurs :
+
+Chef de projet : Julien COCHARD
+Équipe : Jonathan LEMERCIER et Carlos RODIRGUES DIAS
