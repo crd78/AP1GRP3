@@ -65,3 +65,23 @@ body {
     grid-row: 2/2;
     
 }
+.femme-container {
+    width: 100%;
+    text-align: center; /* Centre les éléments horizontalement */
+}
+.femme1 {
+    width: 400px;
+    height: 300px;
+    border-radius: 100%;
+    margin: 0 auto;
+}
+
+.femme2 {
+    width: 400px;
+    height: 300px;
+    border-radius: 100%;
+    margin: 0 auto;
+}
+h2{
+   text-align: center;
+}
