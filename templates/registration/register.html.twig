@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="assets/connexion.css">
+{% endblock %}
+
+{% block body %}
+{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+    <p>Vous êtes déjà connecter avec le compte {{ app.user.email }}</p>
+    {% else %}
+            <h1>Inscription</h1>
+
+    {{ form_start(registrationForm) }}
+    
+        {{ form_row(registrationForm.nom_utilisateur, {
+            label: 'Nom'
+        }) }}
+        
+        {{ form_row(registrationForm.prenom_utilisateur, {
+            label: 'Prénom'
+        }) }}
+
+        {{ form_row(registrationForm.email) }}
+        {{ form_row(registrationForm.plainPassword, {
+            label: 'Mot de passe'
+        }) }}
+        <a href="/terms">{{ form_row(registrationForm.agreeTerms) }}</a>
+
+        <button class="btn btn-lg btn-primary" type="submit">S'inscrire</button>
+    {{ form_end(registrationForm) }}
+    <p><a href="/login">Déjà inscrit ? Se Connecter</a></p> 
+    {% endif %}
+<div class="footer">
+        <p>&copy; 2023 Camesthetique. Tous droits réservés.</p>
+    </div>
+{% endblock %}

@@ -8,16 +8,32 @@
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
+         
         {% endblock %}
+        <Style>
+          .navbar{
+            font-family: 'Rakkas', cursive;
+            background-color: pink  !important;
+          }
+        </Style> 
 
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap" rel="stylesheet">
+        
+
+        
+
+   
     </head>
     <body>
     <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">Esthetique</a>
+    <a class="navbar-brand" href="/">CamEstheticienne</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -40,10 +56,24 @@
         <li class="nav-item">
           <a class="nav-link" href="/contact">Contact</a>
         </li>
+        <li class="nav-item">
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        <a class="nav-link" href="/logout">Se déconnecter</a>
+        {% else %}
+        <a class="nav-link" href="/login">Connexion</a>
+        {% endif %}
+        </li>
+        <li>
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        <p class="nav-link">{{ app.user.email }}</p>
+        {% endif %}
+        </li>
       </ul>
     </div>
   </div>
 </nav>
+<div class="logo"><img src="../assets/logo.png"></div>
+<div class="femmbann"><img src="../assets/femmebann.png" width="10px"></div>
         {% block body %}{% endblock %}
     </body>
 </html>
