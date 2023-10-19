@@ -4,10 +4,10 @@
 
 {% block body %}
 
- <link rel="stylesheet" href="assets/adminpresta.css">
+ <link rel="stylesheet" href="assets/adminmodif.css">
     <h1>Éditer la Prestation</h1>
        
-            {{ form_start(form) }}
+           {{ form_start(form, {'attr': {'class': 'mon-formulaire-personnalise'}}) }}
             {{ form_widget(form) }}
       
     <button type="submit">Sauvegarder</button>
