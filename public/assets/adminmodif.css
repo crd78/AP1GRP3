@@ -17,11 +17,11 @@ body {
     margin-bottom: 30px;
 }
 
-.header h1 {
+ h1 {
     font-size: 36px;
     color: #333;
     margin-bottom: 20px;
-    
+    margin-left: 500px;
 }
 
 .intro {
@@ -71,15 +71,23 @@ body {
 
 
 
-button{
+button  {
     margin-top: 50px;
-    color: pink;
+    background-color: pink;
     text-align: center;
     color: black;
-   
-   
-    
+    transition-duration: 1s;
+    color: black;
+    margin-left: 500px;
+
 }
+button:hover {
+    background-color: white;
+    color: black;
+    transition-duration: 1s;
+    color: black;
+}
+
 label{
     color: black;
     grid-column: 2/2;
@@ -87,3 +95,33 @@ label{
     margin-top: 10px;
     margin-left: 20px;
 }
+
+a{
+    color: black;
+}
+
+.mon-formulaire-personnalise {
+   
+}
+
+.mon-formulaire-personnalise label {
+   margin-left: 500px;
+}
+
+.mon-formulaire-personnalise input {
+    margin-left: 10px;
+    text-align: center;
+    margin: center 0;
+    
+
+}
+
+.mon-formulaire-personnalise textarea {
+    margin-left: 10px;
+    text-align: center;
+
+}
+
+
+/* Et ainsi de suite pour d'autres éléments de formulaire */
+
