@@ -1,34 +1,34 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+
+
 </br></br>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <link rel="stylesheet" href="assets/login.css">
+    <link rel="stylesheet" href="assets/connexion.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <form action="verification" method="post">
             <h2>Connexion</h2>
-            <label for="username">Nom d'utilisateur :</label>
-            <input type="text" id="username" name="username" required>
+            <label for="email">Email :</label>
+            <input type="text" id="email" name="email" required>
             </br></br>
             <label for="password">Mot de passe :</label>
             <input type="password" id="password" name="password" required>
             <button type="submit">Se connecter</button>
         </form>
         </br></br>
+        <div class="tkt">
         <p>Pas encore de compte ? <a href="inscription">S'inscrire</a></p>
+        </div>
     </div>
+   
 </body>
 </html>
 {% endblock %}

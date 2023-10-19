@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Éditer Prestation{% endblock %}
+
+{% block body %}
+
+ <link rel="stylesheet" href="assets/adminmodif.css">
+    <h1>Éditer la Prestation</h1>
+       
+           {{ form_start(form, {'attr': {'class': 'mon-formulaire-personnalise'}}) }}
+            {{ form_widget(form) }}
+      
+    <button type="submit">Sauvegarder</button>
+    <a href="{{ path('app_prestation') }}">Annuler</a>
+
+    {{ form_end(form) }}
+
+    <div class="footer">
+        <p>&copy; 2023 Camesthetique. Tous droits réservés.</p>
+    </div>
+{% endblock %}

@@ -3,18 +3,99 @@
 {% block title %}Presentation{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/jffco/Desktop/Cours/WorkSpace/AP1GRP3/src/Controller/PresentationController.php'|file_link(0) }}">src/Controller/PresentationController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/jffco/Desktop/Cours/WorkSpace/AP1GRP3/templates/presentation/index.html.twig'|file_link(0) }}">templates/presentation/index.html.twig</a></code></li>
-    </ul>
+<link rel="stylesheet" href="assets/presentation2.css">
+<body>
+<br>
+<br>
+<div class="gridpres">
+<div class="imagefemepres"><img src="../assets/femme pres.png"></div>
+<div class="textepres">Bienvenue dans notre salon d'esthétique de renommée, où nous nous engageons à vous offrir une expérience luxueuse et relaxante. 
+</br><br>
+Notre équipe d'esthéticiennes hautement qualifiées et attentionnées est là pour répondre à tous vos besoins en matière de soins de beauté. 
+</br><br>
+Que vous souhaitiez profiter d'un soin du visage rajeunissant, d'un massage apaisant ou d'une manucure et pédicure impeccables, nous mettons tout en œuvre pour vous offrir des services de qualité exceptionnelle. 
+</br><br>
+Nous utilisons des produits de marque de premier choix pour garantir des résultats remarquables. Laissez-nous prendre soin de vous et vous chouchouter dans notre salon d'esthétique accueillant et élégant.
+</br><br>
+Réservez dès maintenant votre rendez-vous et découvrez pourquoi notre salon est le choix préféré des amateurs de beauté et de bien-être.
+</br><br>
+Au sein de notre salon d'esthéticienne, nous sommes une équipe dynamique et professionnelle, prête à vous offrir le meilleur moment possible. Notre équipe est composée de plusieurs membres qualifiés qui travaillent ensemble pour vous fournir un service de qualité. 
+</br><br>
+Nous sommes là pour répondre à vos besoins et vous offrir une expérience agréable et relaxante. Faites-nous confiance pour prendre soin de vous et vous offrir des soins esthétiques exceptionnels.
 </div>
+</br><br>
+</div>
+<divclass="cardspres">
+<section class="articles">
+  <article>
+    <div class="article-wrapper">
+      <figure>
+        <img src="../assets/salon.jpg" alt="" />
+      </figure>
+      <div class="article-body">
+        <h2>Le Salon</h2>
+        <p>
+          Nous avons créé un environnement chaleureux et convivial où vous vous sentirez immédiatement à l'aise. Notre objectif est de vous offrir une expérience de détente et de bien-être.
+        </p>
+            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </article>
+  <article>
+
+    <div class="article-wrapper">
+      <figure>
+        <img src="../assets/salonestheticienne.jpg" alt="" />
+      </figure>
+      <div class="article-body">
+        <h2>Notre Personnel</h2>
+        <p>
+          Notre salon regroupe une équipe professionnelle et expérimentée d'esthéticiennes qualifiées qui sont dévouées à vous offrir les meilleurs soins et services.
+        </p>
+        <a href="#" class="read-more">
+            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </article>
+  <article>
+
+    <div class="article-wrapper">
+      <figure>
+        <img src="https://picsum.photos/id/103/800/450" alt="" />
+      </figure>
+      <div class="article-body">
+        <h2>Soins personnalisés</h2>
+        <p>
+          Nous comprenons que chaque personne est unique. C'est pourquoi nous proposons des soins personnalisés en fonction de vos besoins et de vos préférences. Notre équipe est là pour vous conseiller et vous offrir des services adaptés à vos attentes.
+        </p>
+        <a href="#" class="read-more">
+            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+    </div>
+    </div>
+  </article>
+</section>
+<div class="map">
+<div class="title">
+    <h1>Ou vous pouvez nous trouver ?</h1>
+</div>
+<div class="world-map">
+    <img src="../assets/worldmap.png" alt="map">
+        <div class="pin france">
+            <span>France</span>
+        </div>
+</div>
+</div>
+ <div class="footer">
+        <p>&copy; 2023 Camesthetique. Tous droits réservés.</p>
+    </div>
+
+</body>
 {% endblock %}
