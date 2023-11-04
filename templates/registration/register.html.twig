@@ -27,11 +27,14 @@
         {{ form_row(registrationForm.plainPassword, {
             label: 'Mot de passe'
         }) }}
-        <a href="/terms">{{ form_row(registrationForm.agreeTerms) }}</a>
+        <p><a href="/login">Déjà inscrit ? Se Connecter</a></p> 
+        <a href="/terms">{{ form_row(registrationForm.agreeTerms) }}</a> </br><button class="btn btn-lg btn-primary" type="submit">S'inscrire</button>
+       
 
-        <button class="btn btn-lg btn-primary" type="submit">S'inscrire</button>
+     
+        
     {{ form_end(registrationForm) }}
-    <p><a href="/login">Déjà inscrit ? Se Connecter</a></p> 
+    
     {% endif %}
 <div class="footer">
         <p>&copy; 2023 Camesthetique. Tous droits réservés.</p>

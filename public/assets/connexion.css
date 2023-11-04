@@ -8,17 +8,7 @@ body {
 }
 
 
-.container {
-    max-width: 400px;
-    margin: 0 auto;
-    background-color: #fff; /* Blanc */
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  
-   
-    width: 800px;
-}
+
 
 h1 {
     
@@ -56,11 +46,11 @@ button {
     border-radius: 50px;
     cursor: pointer;
     text-align: center;
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 1100%);
-    margin-top: 150px;
+    transform: translate(-50%, 0%);
+   
 }
 
 button:hover {
@@ -76,8 +66,9 @@ p {
 }
 
 a {
-    text-decoration: none;
+  
     color: pink; /* Rose vif */
+  
 }
 
 a:hover {
@@ -111,11 +102,12 @@ button.btn {
     margin-right: 5px; /* Marge à droite pour l'espace */
 
     /* Styles spécifiques à la case à cocher */
-    width: 10px; /* Largeur de la case à cocher */
-    height: 10px; /* Hauteur de la case à cocher */
+    width: 20px; /* Largeur de la case à cocher */
+    height: 20px; /* Hauteur de la case à cocher */
     cursor: pointer; /* Curseur pointer pour indiquer l'interaction */
     vertical-align: middle; /* Alignement vertical */
-    margin-left: 50%;
+    margin-left: 49.5%;
+    
 }
 .footer {
     text-align: center;
